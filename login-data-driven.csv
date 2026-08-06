@@ -1,0 +1,11 @@
+scenario,email,password,expectedStatus
+1_valid_login,admin@gmail.com,Password123,200
+2_wrong_password,admin@gmail.com,wrongpassword1,401
+3_unregistered_email,unregistered_user@example.com,Password123,401
+4_empty_email,,Password123,400
+5_empty_password,admin@gmail.com,,400
+6_empty_both,,,400
+7_space_before_email, admin@gmail.com,Password123,200
+8_space_after_email,admin@gmail.com ,Password123,200
+9_space_before_password,admin@gmail.com, Password123,200
+10_space_after_password,admin@gmail.com,Password123 ,200
